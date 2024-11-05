@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _isResting = true;
       _durationToRest = durationOfRest;
-      _restType = durationOfRest == 40
+      _restType = durationOfRest == 60
           ? 'Leve'
           : durationOfRest == 90
               ? 'Médio'
@@ -232,7 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               if (isStarted && !_isResting) ...[
                 const SizedBox(height: 90),
-                StyledButton("Descanso leve 60s", () => calculateRestTime(4),
+                StyledButton("Descanso leve 60s", () => calculateRestTime(60),
                     _isResting),
                 const SizedBox(height: 20),
                 StyledButton("Descanso Médio 1m 30s",
